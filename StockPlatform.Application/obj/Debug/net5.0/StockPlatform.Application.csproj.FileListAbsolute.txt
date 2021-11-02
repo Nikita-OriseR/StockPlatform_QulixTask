@@ -1,0 +1,15 @@
+D:\Работа\QULIX .NET\StockPlatform.Application\bin\Debug\net5.0\StockPlatform.Application.deps.json
+D:\Работа\QULIX .NET\StockPlatform.Application\bin\Debug\net5.0\StockPlatform.Application.dll
+D:\Работа\QULIX .NET\StockPlatform.Application\bin\Debug\net5.0\ref\StockPlatform.Application.dll
+D:\Работа\QULIX .NET\StockPlatform.Application\bin\Debug\net5.0\StockPlatform.Application.pdb
+D:\Работа\QULIX .NET\StockPlatform.Application\bin\Debug\net5.0\StockPlatform.Domain.dll
+D:\Работа\QULIX .NET\StockPlatform.Application\bin\Debug\net5.0\StockPlatform.Domain.pdb
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.csproj.AssemblyReference.cache
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.AssemblyInfoInputs.cache
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.AssemblyInfo.cs
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.csproj.CoreCompileInputs.cache
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.csproj.CopyComplete
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.dll
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\ref\StockPlatform.Application.dll
+D:\Работа\QULIX .NET\StockPlatform.Application\obj\Debug\net5.0\StockPlatform.Application.pdb

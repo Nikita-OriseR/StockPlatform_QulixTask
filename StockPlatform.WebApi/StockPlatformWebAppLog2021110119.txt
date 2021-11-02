@@ -1,0 +1,282 @@
+2021-11-01 19:06:53.048 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:06:59.110 +03:00 [INF] Executed DbCommand (107ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-11-01 19:06:59.312 +03:00 [INF] Executed DbCommand (179ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-11-01 19:07:00.412 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-01 19:07:00.412 +03:00 [INF] Hosting environment: Development
+2021-11-01 19:07:00.412 +03:00 [INF] Content root path: D:\Работа\QULIX .NET\StockPlatform.WebApi
+2021-11-01 19:07:00.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44377/ - -
+2021-11-01 19:07:01.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44377/ - - - 404 - - 705.9748ms
+2021-11-01 19:07:01.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44377/favicon.ico - -
+2021-11-01 19:07:01.744 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44377/favicon.ico - - - 404 - - 3.5413ms
+2021-11-01 19:07:10.362 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44377/api/photo - -
+2021-11-01 19:07:10.399 +03:00 [INF] Executing endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:07:10.503 +03:00 [INF] Route matched with {action = "GetAll", controller = "Photo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm]] GetAll() on controller StockPlatform.WebApi.Controllers.PhotoController (StockPlatform.WebApi).
+2021-11-01 19:07:11.566 +03:00 [INF] Notes request: GetPhotoListQuery "00000000-0000-0000-0000-000000000000" {"PhotoId":"00000000-0000-0000-0000-000000000000","$type":"GetPhotoListQuery"}
+2021-11-01 19:07:11.624 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:07:12.853 +03:00 [INF] Executed DbCommand (265ms) [Parameters=[@__request_PhotoId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ContentLink], [p].[PhotoId], [p].[Title]
+FROM [Photos] AS [p]
+WHERE [p].[PhotoId] = @__request_PhotoId_0
+2021-11-01 19:07:12.915 +03:00 [INF] Executing OkObjectResult, writing value of type 'StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm'.
+2021-11-01 19:07:13.062 +03:00 [INF] Executed action StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi) in 2552.595ms
+2021-11-01 19:07:13.063 +03:00 [INF] Executed endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:07:13.070 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44377/api/photo - - - 200 - application/json;+charset=utf-8 2708.4699ms
+2021-11-01 19:09:17.053 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:09:17.795 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-11-01 19:09:19.054 +03:00 [INF] Executed DbCommand (1,236ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-11-01 19:09:22.868 +03:00 [INF] Executed DbCommand (1,861ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Guid), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = Int32), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (DbType = Guid), @p26='?' (DbType = DateTime2), @p27='?' (DbType = Int32), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (DbType = Guid), @p31='?' (DbType = DateTime2), @p32='?' (DbType = Int32), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (DbType = Guid), @p36='?' (DbType = DateTime2), @p37='?' (DbType = Int32), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (DbType = DateTime2), @p42='?' (DbType = Int32), @p43='?' (Size = 4000), @p44='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([AuthorId], [AccountСreationDate], [Age], [Name], [Nickname])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34),
+(@p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44);
+2021-11-01 19:09:24.108 +03:00 [INF] Executed DbCommand (1,218ms) [Parameters=[@p45='?' (DbType = Guid), @p46='?' (DbType = Guid), @p47='?' (Size = 4000), @p48='?' (DbType = Double), @p49='?' (DbType = DateTime2), @p50='?' (DbType = Double), @p51='?' (DbType = Int32), @p52='?' (Size = 4000), @p53='?' (DbType = Double), @p54='?' (DbType = Guid), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (DbType = Double), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Double), @p60='?' (DbType = Int32), @p61='?' (Size = 4000), @p62='?' (DbType = Double), @p63='?' (DbType = Guid), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = Double), @p67='?' (DbType = DateTime2), @p68='?' (DbType = Double), @p69='?' (DbType = Int32), @p70='?' (Size = 4000), @p71='?' (DbType = Double), @p72='?' (DbType = Guid), @p73='?' (DbType = Guid), @p74='?' (Size = 4000), @p75='?' (DbType = Double), @p76='?' (DbType = DateTime2), @p77='?' (DbType = Int32), @p78='?' (DbType = Int32), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (DbType = Guid), @p82='?' (Size = 4000), @p83='?' (DbType = Double), @p84='?' (DbType = DateTime2), @p85='?' (DbType = Int32), @p86='?' (DbType = Int32), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (DbType = Guid), @p90='?' (Size = 4000), @p91='?' (DbType = Double), @p92='?' (DbType = DateTime2), @p93='?' (DbType = Int32), @p94='?' (DbType = Int32), @p95='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Photos] ([PhotoId], [AuthorId], [ContentLink], [Cost], [CreationDate], [Height], [NumberPurchases], [Title], [Width])
+VALUES (@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62),
+(@p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71);
+INSERT INTO [Texts] ([TextId], [AuthorId], [Content], [Cost], [CreationDate], [NumberPurchases], [Size], [Title])
+VALUES (@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95);
+2021-11-01 19:11:42.811 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:11:43.529 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-11-01 19:11:43.640 +03:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-11-01 19:11:44.378 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Guid), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = Int32), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (DbType = Guid), @p26='?' (DbType = DateTime2), @p27='?' (DbType = Int32), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (DbType = Guid), @p31='?' (DbType = DateTime2), @p32='?' (DbType = Int32), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (DbType = Guid), @p36='?' (DbType = DateTime2), @p37='?' (DbType = Int32), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (DbType = DateTime2), @p42='?' (DbType = Int32), @p43='?' (Size = 4000), @p44='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([AuthorId], [AccountСreationDate], [Age], [Name], [Nickname])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34),
+(@p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44);
+2021-11-01 19:11:44.432 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[@p45='?' (DbType = Guid), @p46='?' (DbType = Guid), @p47='?' (Size = 4000), @p48='?' (DbType = Double), @p49='?' (DbType = DateTime2), @p50='?' (DbType = Double), @p51='?' (DbType = Int32), @p52='?' (Size = 4000), @p53='?' (DbType = Double), @p54='?' (DbType = Guid), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (DbType = Double), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Double), @p60='?' (DbType = Int32), @p61='?' (Size = 4000), @p62='?' (DbType = Double), @p63='?' (DbType = Guid), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = Double), @p67='?' (DbType = DateTime2), @p68='?' (DbType = Double), @p69='?' (DbType = Int32), @p70='?' (Size = 4000), @p71='?' (DbType = Double), @p72='?' (DbType = Guid), @p73='?' (DbType = Guid), @p74='?' (Size = 4000), @p75='?' (DbType = Double), @p76='?' (DbType = DateTime2), @p77='?' (DbType = Int32), @p78='?' (DbType = Int32), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (DbType = Guid), @p82='?' (Size = 4000), @p83='?' (DbType = Double), @p84='?' (DbType = DateTime2), @p85='?' (DbType = Int32), @p86='?' (DbType = Int32), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (DbType = Guid), @p90='?' (Size = 4000), @p91='?' (DbType = Double), @p92='?' (DbType = DateTime2), @p93='?' (DbType = Int32), @p94='?' (DbType = Int32), @p95='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Photos] ([PhotoId], [AuthorId], [ContentLink], [Cost], [CreationDate], [Height], [NumberPurchases], [Title], [Width])
+VALUES (@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62),
+(@p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71);
+INSERT INTO [Texts] ([TextId], [AuthorId], [Content], [Cost], [CreationDate], [NumberPurchases], [Size], [Title])
+VALUES (@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95);
+2021-11-01 19:11:44.679 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-01 19:11:44.679 +03:00 [INF] Hosting environment: Development
+2021-11-01 19:11:44.680 +03:00 [INF] Content root path: D:\Работа\QULIX .NET\StockPlatform.WebApi
+2021-11-01 19:11:44.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44377/ - -
+2021-11-01 19:11:44.829 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44377/ - - - 404 - - 114.3468ms
+2021-11-01 19:12:06.974 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44377/api/photo - -
+2021-11-01 19:12:06.990 +03:00 [INF] Executing endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:12:07.057 +03:00 [INF] Route matched with {action = "GetAll", controller = "Photo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm]] GetAll() on controller StockPlatform.WebApi.Controllers.PhotoController (StockPlatform.WebApi).
+2021-11-01 19:12:07.738 +03:00 [INF] Notes request: GetPhotoListQuery "00000000-0000-0000-0000-000000000000" {"PhotoId":"00000000-0000-0000-0000-000000000000","$type":"GetPhotoListQuery"}
+2021-11-01 19:12:07.765 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:12:08.442 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__request_PhotoId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ContentLink], [p].[PhotoId], [p].[Title]
+FROM [Photos] AS [p]
+WHERE [p].[PhotoId] = @__request_PhotoId_0
+2021-11-01 19:12:08.483 +03:00 [INF] Executing OkObjectResult, writing value of type 'StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm'.
+2021-11-01 19:12:08.549 +03:00 [INF] Executed action StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi) in 1473.2013ms
+2021-11-01 19:12:08.550 +03:00 [INF] Executed endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:12:08.556 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44377/api/photo - - - 200 - application/json;+charset=utf-8 1581.6911ms
+2021-11-01 19:16:23.682 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:16:24.685 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-11-01 19:16:24.772 +03:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-11-01 19:16:25.549 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Guid), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = Int32), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (DbType = Guid), @p26='?' (DbType = DateTime2), @p27='?' (DbType = Int32), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (DbType = Guid), @p31='?' (DbType = DateTime2), @p32='?' (DbType = Int32), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (DbType = Guid), @p36='?' (DbType = DateTime2), @p37='?' (DbType = Int32), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (DbType = DateTime2), @p42='?' (DbType = Int32), @p43='?' (Size = 4000), @p44='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([AuthorId], [AccountСreationDate], [Age], [Name], [Nickname])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34),
+(@p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44);
+2021-11-01 19:16:25.574 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p45='?' (DbType = Guid), @p46='?' (DbType = Guid), @p47='?' (Size = 4000), @p48='?' (DbType = Double), @p49='?' (DbType = DateTime2), @p50='?' (DbType = Double), @p51='?' (DbType = Int32), @p52='?' (Size = 4000), @p53='?' (DbType = Double), @p54='?' (DbType = Guid), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (DbType = Double), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Double), @p60='?' (DbType = Int32), @p61='?' (Size = 4000), @p62='?' (DbType = Double), @p63='?' (DbType = Guid), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = Double), @p67='?' (DbType = DateTime2), @p68='?' (DbType = Double), @p69='?' (DbType = Int32), @p70='?' (Size = 4000), @p71='?' (DbType = Double), @p72='?' (DbType = Guid), @p73='?' (DbType = Guid), @p74='?' (Size = 4000), @p75='?' (DbType = Double), @p76='?' (DbType = DateTime2), @p77='?' (DbType = Int32), @p78='?' (DbType = Int32), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (DbType = Guid), @p82='?' (Size = 4000), @p83='?' (DbType = Double), @p84='?' (DbType = DateTime2), @p85='?' (DbType = Int32), @p86='?' (DbType = Int32), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (DbType = Guid), @p90='?' (Size = 4000), @p91='?' (DbType = Double), @p92='?' (DbType = DateTime2), @p93='?' (DbType = Int32), @p94='?' (DbType = Int32), @p95='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Photos] ([PhotoId], [AuthorId], [ContentLink], [Cost], [CreationDate], [Height], [NumberPurchases], [Title], [Width])
+VALUES (@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62),
+(@p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71);
+INSERT INTO [Texts] ([TextId], [AuthorId], [Content], [Cost], [CreationDate], [NumberPurchases], [Size], [Title])
+VALUES (@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95);
+2021-11-01 19:16:25.852 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-01 19:16:25.852 +03:00 [INF] Hosting environment: Development
+2021-11-01 19:16:25.852 +03:00 [INF] Content root path: D:\Работа\QULIX .NET\StockPlatform.WebApi
+2021-11-01 19:16:25.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44377/ - -
+2021-11-01 19:16:26.043 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44377/ - - - 404 - - 132.8466ms
+2021-11-01 19:16:26.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44377/favicon.ico - -
+2021-11-01 19:16:26.238 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44377/favicon.ico - - - 0 - - 1.1223ms
+2021-11-01 19:16:30.103 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44377/api/photo - -
+2021-11-01 19:16:30.114 +03:00 [INF] Executing endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:16:30.145 +03:00 [INF] Route matched with {action = "GetAll", controller = "Photo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm]] GetAll() on controller StockPlatform.WebApi.Controllers.PhotoController (StockPlatform.WebApi).
+2021-11-01 19:16:30.741 +03:00 [INF] Notes request: GetPhotoListQuery "00000000-0000-0000-0000-000000000000" {"PhotoId":"00000000-0000-0000-0000-000000000000","$type":"GetPhotoListQuery"}
+2021-11-01 19:16:30.770 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:16:31.696 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__request_PhotoId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ContentLink], [p].[PhotoId], [p].[Title]
+FROM [Photos] AS [p]
+WHERE [p].[PhotoId] = @__request_PhotoId_0
+2021-11-01 19:16:31.754 +03:00 [INF] Executing OkObjectResult, writing value of type 'StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm'.
+2021-11-01 19:16:31.876 +03:00 [INF] Executed action StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi) in 1706.8707ms
+2021-11-01 19:16:31.878 +03:00 [INF] Executed endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:16:31.887 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44377/api/photo - - - 200 - application/json;+charset=utf-8 1782.7247ms
+2021-11-01 19:19:11.681 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44377/api/photo - -
+2021-11-01 19:19:11.683 +03:00 [INF] Executing endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:19:11.684 +03:00 [INF] Route matched with {action = "GetAll", controller = "Photo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm]] GetAll() on controller StockPlatform.WebApi.Controllers.PhotoController (StockPlatform.WebApi).
+2021-11-01 19:19:11.686 +03:00 [INF] Notes request: GetPhotoListQuery "00000000-0000-0000-0000-000000000000" {"PhotoId":"00000000-0000-0000-0000-000000000000","$type":"GetPhotoListQuery"}
+2021-11-01 19:19:11.772 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:19:11.786 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_PhotoId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ContentLink], [p].[PhotoId], [p].[Title]
+FROM [Photos] AS [p]
+WHERE [p].[PhotoId] = @__request_PhotoId_0
+2021-11-01 19:19:11.787 +03:00 [INF] Executing OkObjectResult, writing value of type 'StockPlatform.Application.StockPlatform.Queries.GetPhotoList.PhotoListVm'.
+2021-11-01 19:19:11.788 +03:00 [INF] Executed action StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi) in 103.909ms
+2021-11-01 19:19:11.788 +03:00 [INF] Executed endpoint 'StockPlatform.WebApi.Controllers.PhotoController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:19:11.789 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44377/api/photo - - - 200 - application/json;+charset=utf-8 107.7243ms
+2021-11-01 19:33:33.263 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:33:33.811 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-11-01 19:33:34.268 +03:00 [INF] Executed DbCommand (438ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-11-01 19:33:35.200 +03:00 [INF] Executed DbCommand (283ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Guid), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Guid), @p21='?' (DbType = DateTime2), @p22='?' (DbType = Int32), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (DbType = Guid), @p26='?' (DbType = DateTime2), @p27='?' (DbType = Int32), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (DbType = Guid), @p31='?' (DbType = DateTime2), @p32='?' (DbType = Int32), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (DbType = Guid), @p36='?' (DbType = DateTime2), @p37='?' (DbType = Int32), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Guid), @p41='?' (DbType = DateTime2), @p42='?' (DbType = Int32), @p43='?' (Size = 4000), @p44='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([AuthorId], [AccountСreationDate], [Age], [Name], [Nickname])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34),
+(@p35, @p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43, @p44);
+2021-11-01 19:33:35.380 +03:00 [INF] Executed DbCommand (175ms) [Parameters=[@p45='?' (DbType = Guid), @p46='?' (DbType = Guid), @p47='?' (Size = 4000), @p48='?' (DbType = Double), @p49='?' (DbType = DateTime2), @p50='?' (DbType = Double), @p51='?' (DbType = Int32), @p52='?' (Size = 4000), @p53='?' (DbType = Double), @p54='?' (DbType = Guid), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (DbType = Double), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Double), @p60='?' (DbType = Int32), @p61='?' (Size = 4000), @p62='?' (DbType = Double), @p63='?' (DbType = Guid), @p64='?' (DbType = Guid), @p65='?' (Size = 4000), @p66='?' (DbType = Double), @p67='?' (DbType = DateTime2), @p68='?' (DbType = Double), @p69='?' (DbType = Int32), @p70='?' (Size = 4000), @p71='?' (DbType = Double), @p72='?' (DbType = Guid), @p73='?' (DbType = Guid), @p74='?' (Size = 4000), @p75='?' (DbType = Double), @p76='?' (DbType = DateTime2), @p77='?' (DbType = Int32), @p78='?' (DbType = Int32), @p79='?' (Size = 4000), @p80='?' (DbType = Guid), @p81='?' (DbType = Guid), @p82='?' (Size = 4000), @p83='?' (DbType = Double), @p84='?' (DbType = DateTime2), @p85='?' (DbType = Int32), @p86='?' (DbType = Int32), @p87='?' (Size = 4000), @p88='?' (DbType = Guid), @p89='?' (DbType = Guid), @p90='?' (Size = 4000), @p91='?' (DbType = Double), @p92='?' (DbType = DateTime2), @p93='?' (DbType = Int32), @p94='?' (DbType = Int32), @p95='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Photos] ([PhotoId], [AuthorId], [ContentLink], [Cost], [CreationDate], [Height], [NumberPurchases], [Title], [Width])
+VALUES (@p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62),
+(@p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71);
+INSERT INTO [Texts] ([TextId], [AuthorId], [Content], [Cost], [CreationDate], [NumberPurchases], [Size], [Title])
+VALUES (@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95);
+2021-11-01 19:33:35.679 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-01 19:33:35.680 +03:00 [INF] Hosting environment: Development
+2021-11-01 19:33:35.680 +03:00 [INF] Content root path: D:\Работа\QULIX .NET\StockPlatform.WebApi
+2021-11-01 19:33:35.707 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44377/ - -
+2021-11-01 19:33:35.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44377/ - - - 404 - - 83.5369ms
+2021-11-01 19:33:35.933 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44377/favicon.ico - -
+2021-11-01 19:33:35.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44377/favicon.ico - - - 0 - - 1.1053ms
+2021-11-01 19:33:58.844 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44377/api/entity - -
+2021-11-01 19:33:58.857 +03:00 [INF] Executing endpoint 'StockPlatform.WebApi.Controllers.EntityController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:33:58.900 +03:00 [INF] Route matched with {action = "GetAll", controller = "Entity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StockPlatform.Application.StockPlatform.Queries.GetEntityList.EntitiesListVm]] GetAll() on controller StockPlatform.WebApi.Controllers.EntityController (StockPlatform.WebApi).
+2021-11-01 19:33:58.989 +03:00 [INF] Notes request: GetEntitiesListQuery "00000000-0000-0000-0000-000000000000" {"AuthorId":"00000000-0000-0000-0000-000000000000","PhotoId":"00000000-0000-0000-0000-000000000000","TextId":"00000000-0000-0000-0000-000000000000","$type":"GetEntitiesListQuery"}
+2021-11-01 19:33:59.931 +03:00 [INF] Entity Framework Core 5.0.11 initialized 'StockPlatformDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-11-01 19:34:00.737 +03:00 [INF] Executed DbCommand (128ms) [Parameters=[@__request_AuthorId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AuthorId], [a].[Name], [a].[Nickname]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__request_AuthorId_0
+2021-11-01 19:34:00.821 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[@__request_PhotoId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ContentLink], [p].[PhotoId], [p].[Title] AS [PhotoTitle]
+FROM [Photos] AS [p]
+WHERE [p].[PhotoId] = @__request_PhotoId_0
+2021-11-01 19:34:00.839 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__request_TextId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Content], [t].[TextId], [t].[Title] AS [TextTitle]
+FROM [Texts] AS [t]
+WHERE [t].[TextId] = @__request_TextId_0
+2021-11-01 19:34:00.867 +03:00 [INF] Executing OkObjectResult, writing value of type 'StockPlatform.Application.StockPlatform.Queries.GetEntityList.EntitiesListVm'.
+2021-11-01 19:34:00.958 +03:00 [INF] Executed action StockPlatform.WebApi.Controllers.EntityController.GetAll (StockPlatform.WebApi) in 2044.4227ms
+2021-11-01 19:34:00.959 +03:00 [INF] Executed endpoint 'StockPlatform.WebApi.Controllers.EntityController.GetAll (StockPlatform.WebApi)'
+2021-11-01 19:34:00.966 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44377/api/entity - - - 200 - application/json;+charset=utf-8 2122.0145ms

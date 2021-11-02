@@ -1,0 +1,12 @@
+D:\Работа\QULIX .NET\StockPlatform.Domain\bin\Debug\net5.0\StockPlatform.Domain.deps.json
+D:\Работа\QULIX .NET\StockPlatform.Domain\bin\Debug\net5.0\StockPlatform.Domain.dll
+D:\Работа\QULIX .NET\StockPlatform.Domain\bin\Debug\net5.0\ref\StockPlatform.Domain.dll
+D:\Работа\QULIX .NET\StockPlatform.Domain\bin\Debug\net5.0\StockPlatform.Domain.pdb
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\StockPlatform.Domain.csproj.AssemblyReference.cache
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\StockPlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\StockPlatform.Domain.AssemblyInfoInputs.cache
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\StockPlatform.Domain.AssemblyInfo.cs
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\StockPlatform.Domain.csproj.CoreCompileInputs.cache
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\StockPlatform.Domain.dll
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\ref\StockPlatform.Domain.dll
+D:\Работа\QULIX .NET\StockPlatform.Domain\obj\Debug\net5.0\StockPlatform.Domain.pdb

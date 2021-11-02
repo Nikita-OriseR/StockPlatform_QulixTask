@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "StockPlatform.Domain/1.0.0": {
+        "runtime": {
+          "StockPlatform.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StockPlatform.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
