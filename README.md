@@ -1,0 +1,1 @@
+# StockPlatform_QulixTask
